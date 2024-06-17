@@ -1,0 +1,13 @@
+@font-face {
+    src: url("fonts/roboclone.ttf");
+}
+
+.highlight {
+    -fx-effect: dropshadow(one-pass-box, #00c8ff, 127, 0.31,0,0);
+}
+
+.axis {
+    -fx-font-size: 20px;
+    -fx-font-family: Robo-Clone;
+    -fx-effect: dropshadow(gaussian,#e5f700,50,0.92,0,0);
+}

@@ -1,0 +1,34 @@
+@font-face {
+    src: url("fonts/roboclone.ttf");
+}
+
+#LobbyBackground {
+    /*-fx-background-image: url("Images/Lobby-Window_mit_Grafik_(2625_x_1725).jpg");*/
+    -fx-background-image: url("Images/basic_layout/Lobby-Window_HG_und_ready_(2625x1725).jpg");
+    -fx-background-color: BLACK;
+    -fx-background-repeat: no-repeat;
+    /*-fx-background-size: 1312.5 px;*/
+    -fx-background-size: stretch;
+    -fx-background-position: center;
+
+}
+
+.Label {
+    -fx-background-color: aqua;
+    background-color: aqua;
+
+}
+
+
+
+
+#playerLabel {
+
+    -fx-font-family: Robo-Clone;
+    -fx-background-image: url("Images/basic_layout/Plakette.jpg");
+    -fx-background-size: stretch;
+    /*-fx-text-fill: DIMGREY;*/
+
+
+}
+

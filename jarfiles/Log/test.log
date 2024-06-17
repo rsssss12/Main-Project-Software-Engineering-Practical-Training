@@ -1,0 +1,325 @@
+2022-08-04 22:53:27,091 [JavaFX Application Thread] DEBUG gui.mvvm.connection.ConnectionViewModel - AI state changed
+2022-08-04 22:53:27,819 [main] DEBUG network.Server - New client has connected to server
+2022-08-04 22:53:27,978 [Thread-5] DEBUG json.wrapper_utilities.MessageHandlerClient - Send HelloServer to Server
+2022-08-04 22:53:27,979 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"HelloServer","messageBody":{"group":"NeidischeNarwale","isAI":true,"protocol":"Version 1.0"}}
+2022-08-04 22:53:27,993 [Thread-2] DEBUG network.ClientHandler - Send Welcome to Client.
+2022-08-04 22:53:27,995 [Thread-2] DEBUG network.ClientHandler - []
+2022-08-04 22:53:27,996 [Thread-2] DEBUG network.ClientHandler - [network.ClientHandler@6acf45bb]
+2022-08-04 22:53:27,997 [Thread-2] DEBUG network.ClientHandler - [706]
+2022-08-04 22:53:27,996 [Thread-5] DEBUG json.wrapper_utilities.MessageHandlerClient - Got clientID : 706
+2022-08-04 22:53:27,997 [Thread-5] DEBUG json.wrapper_utilities.MessageHandlerClient - isAI : true
+2022-08-04 22:53:31,000 [Timer-1] DEBUG AI.DumbAI - Check Time: dumbAi joinsGame
+2022-08-04 22:53:31,002 [Timer-1] DEBUG AI.DumbAI - chosenRobot = Navy Seal
+2022-08-04 22:53:31,004 [Timer-1] DEBUG network.Client - Client sent: {"messageType":"PlayerValues","messageBody":{"name":"AI 295710","figure":1}}
+2022-08-04 22:53:31,005 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.lobby.PlayerValues@497ff196
+2022-08-04 22:53:31,030 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - username: AI 295710
+2022-08-04 22:53:31,030 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SetStatus","messageBody":{"ready":true}}
+2022-08-04 22:53:31,030 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - robotNumber: 1
+2022-08-04 22:53:31,031 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.lobby.SetStatus@20aba383
+2022-08-04 22:53:42,120 [JavaFX Application Thread] DEBUG gui.mvvm.connection.ConnectionViewModel - AI state changed
+2022-08-04 22:53:42,835 [main] DEBUG network.Server - New client has connected to server
+2022-08-04 22:53:42,923 [Thread-5] DEBUG json.wrapper_utilities.MessageHandlerClient - Send HelloServer to Server
+2022-08-04 22:53:42,925 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"HelloServer","messageBody":{"group":"NeidischeNarwale","isAI":true,"protocol":"Version 1.0"}}
+2022-08-04 22:53:42,927 [Thread-4] DEBUG network.ClientHandler - Send Welcome to Client.
+2022-08-04 22:53:42,929 [Thread-4] DEBUG network.ClientHandler - [network.ClientHandler@6acf45bb]
+2022-08-04 22:53:42,929 [Thread-4] DEBUG network.ClientHandler - [network.ClientHandler@6acf45bb, network.ClientHandler@141c2e73]
+2022-08-04 22:53:42,929 [Thread-4] DEBUG network.ClientHandler - [706, 63]
+2022-08-04 22:53:42,930 [Thread-5] DEBUG json.wrapper_utilities.MessageHandlerClient - Got clientID : 63
+2022-08-04 22:53:42,931 [Thread-5] DEBUG json.wrapper_utilities.MessageHandlerClient - isAI : true
+2022-08-04 22:53:43,840 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - username: AI 295710
+2022-08-04 22:53:43,842 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - robotNumber: 1
+2022-08-04 22:53:45,931 [Timer-1] DEBUG AI.DumbAI - Check Time: dumbAi joinsGame
+2022-08-04 22:53:45,934 [Timer-1] DEBUG AI.DumbAI - chosenRobot = Red October
+2022-08-04 22:53:45,936 [Timer-1] DEBUG network.Client - Client sent: {"messageType":"PlayerValues","messageBody":{"name":"AI 642108","figure":2}}
+2022-08-04 22:53:45,937 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.lobby.PlayerValues@1adbd280
+2022-08-04 22:53:45,939 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - username: AI 642108
+2022-08-04 22:53:45,939 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - username: AI 642108
+2022-08-04 22:53:45,939 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - robotNumber: 2
+2022-08-04 22:53:45,939 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - robotNumber: 2
+2022-08-04 22:53:45,940 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SetStatus","messageBody":{"ready":true}}
+2022-08-04 22:53:45,941 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.lobby.SetStatus@1ee44503
+2022-08-04 22:54:01,776 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyViewModel - chosenRacingCourse = DIZZYHIGHWAY
+2022-08-04 22:54:04,832 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyViewModel - chosenRacingCourse = EXTRACRISPY
+2022-08-04 22:54:07,108 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyViewModel - chosenRacingCourse = DEATHTRAP
+2022-08-04 22:54:10,373 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyViewModel - chosenRacingCourse = TWISTER
+2022-08-04 22:54:12,789 [JavaFX Application Thread] DEBUG network.Client - Client sent: {"messageType":"MapSelected","messageBody":{"map":"Twister"}}
+2022-08-04 22:54:12,791 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.lobby.MapSelected@3d38d8fb
+2022-08-04 22:54:12,791 [Thread-2] DEBUG gamelogic.lobby.Lobby - TWISTER
+2022-08-04 22:54:12,792 [Thread-2] DEBUG gamelogic.lobby.Lobby - jsonfiles/Twister.json
+2022-08-04 22:54:12,796 [Thread-2] DEBUG json.wrapper_utilities.MapWrapping - class gui.mvvm.game.GameModel
+2022-08-04 22:54:12,797 [Thread-2] DEBUG json.wrapper_utilities.MapWrapping - null
+2022-08-04 22:54:12,797 [Thread-2] DEBUG json.wrapper_utilities.MapWrapping - inputStream: sun.net.www.protocol.jar.JarURLConnection$JarURLInputStream@51fb8ede
+2022-08-04 22:54:12,847 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameModel - GameStarted in GameModel
+2022-08-04 22:54:12,851 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameModel - GameStarted in GameModel
+2022-08-04 22:54:12,879 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - GameStarted in LobbyModel
+2022-08-04 22:54:12,897 [JavaFX Application Thread] DEBUG gui.mvvm.lobby.LobbyModel - GameStarted in LobbyModel
+2022-08-04 22:54:14,355 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 3
+2022-08-04 22:54:14,356 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 4
+2022-08-04 22:54:14,356 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: 5
+2022-08-04 22:54:14,357 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: 3
+2022-08-04 22:54:14,357 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 9
+2022-08-04 22:54:14,357 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,358 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:BOTTOM
+2022-08-04 22:54:14,358 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: BOTTOM
+2022-08-04 22:54:14,358 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,363 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 7
+2022-08-04 22:54:14,363 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 9
+2022-08-04 22:54:14,363 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: 8
+2022-08-04 22:54:14,363 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: 9
+2022-08-04 22:54:14,364 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 12
+2022-08-04 22:54:14,364 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,364 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:RIGHT
+2022-08-04 22:54:14,364 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: RIGHT
+2022-08-04 22:54:14,365 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,367 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 8
+2022-08-04 22:54:14,368 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 0
+2022-08-04 22:54:14,368 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: -7
+2022-08-04 22:54:14,368 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: 0
+2022-08-04 22:54:14,368 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 1
+2022-08-04 22:54:14,369 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,369 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:LEFT
+2022-08-04 22:54:14,370 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: LEFT
+2022-08-04 22:54:14,370 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,372 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 12
+2022-08-04 22:54:14,373 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 5
+2022-08-04 22:54:14,373 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: -4
+2022-08-04 22:54:14,373 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: -12
+2022-08-04 22:54:14,374 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 1
+2022-08-04 22:54:14,374 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,374 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:TOP
+2022-08-04 22:54:14,374 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: TOP
+2022-08-04 22:54:14,374 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,378 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - 6
+2022-08-04 22:54:14,380 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - gameModel.ownPlayerNameProperty().getValue(): AI 295710
+2022-08-04 22:54:14,380 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - ownPlayerName.equals ' ' false
+2022-08-04 22:54:14,432 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 3
+2022-08-04 22:54:14,433 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 4
+2022-08-04 22:54:14,434 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: 5
+2022-08-04 22:54:14,434 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: 3
+2022-08-04 22:54:14,434 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 9
+2022-08-04 22:54:14,435 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,435 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:BOTTOM
+2022-08-04 22:54:14,436 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: BOTTOM
+2022-08-04 22:54:14,436 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,439 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 7
+2022-08-04 22:54:14,440 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 9
+2022-08-04 22:54:14,440 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: 8
+2022-08-04 22:54:14,440 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: 9
+2022-08-04 22:54:14,441 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 12
+2022-08-04 22:54:14,441 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,441 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:RIGHT
+2022-08-04 22:54:14,442 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: RIGHT
+2022-08-04 22:54:14,442 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,447 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 8
+2022-08-04 22:54:14,447 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 0
+2022-08-04 22:54:14,448 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: -7
+2022-08-04 22:54:14,448 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: 0
+2022-08-04 22:54:14,450 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 1
+2022-08-04 22:54:14,450 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,451 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:LEFT
+2022-08-04 22:54:14,451 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: LEFT
+2022-08-04 22:54:14,452 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,457 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getX(): 12
+2022-08-04 22:54:14,459 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - laser.getY(): 5
+2022-08-04 22:54:14,460 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord dyn: -4
+2022-08-04 22:54:14,460 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - coord stat: -12
+2022-08-04 22:54:14,462 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - endOfLine: 1
+2022-08-04 22:54:14,462 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - boardElement instanceof Wall: true
+2022-08-04 22:54:14,463 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction Laser:TOP
+2022-08-04 22:54:14,463 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction of Wall orientation: TOP
+2022-08-04 22:54:14,464 [JavaFX Application Thread] DEBUG gui.mvvm.game.BoardMapCreator - direction.equals(orientation1): true
+2022-08-04 22:54:14,468 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - 6
+2022-08-04 22:54:14,471 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - gameModel.ownPlayerNameProperty().getValue(): AI 642108
+2022-08-04 22:54:14,471 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - ownPlayerName.equals ' ' false
+2022-08-04 22:54:22,845 [Thread-2] DEBUG gamelogic.round.Game - startNewPhase: activePhase: null
+2022-08-04 22:54:22,846 [Thread-2] DEBUG gamelogic.round.Game - startNewPhase: new activePhase: gamelogic.round.SetupPhase@1948cb7f
+2022-08-04 22:54:28,856 [Timer-3] DEBUG network.Client - Client sent: {"messageType":"SetStartingPoint","messageBody":{"x":0,"y":3}}
+2022-08-04 22:54:28,859 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.setup_phase.SetStartingPoint@2b6b4eaf
+2022-08-04 22:54:28,877 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - Old image is null.
+2022-08-04 22:54:28,877 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - Old image is null.
+2022-08-04 22:54:31,876 [Timer-4] DEBUG network.Client - Client sent: {"messageType":"SetStartingPoint","messageBody":{"x":0,"y":6}}
+2022-08-04 22:54:31,880 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.setup_phase.SetStartingPoint@5be6d8bb
+2022-08-04 22:54:31,883 [Thread-4] DEBUG gamelogic.round.Game - startNewPhase: activePhase: gamelogic.round.SetupPhase@1948cb7f
+2022-08-04 22:54:31,884 [Thread-4] DEBUG gamelogic.round.Game - startNewPhase: new activePhase: gamelogic.round.ProgrammingPhase@2e7c1a02
+2022-08-04 22:54:31,887 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - Old image is null.
+2022-08-04 22:54:31,887 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameViewModel - Old image is null.
+2022-08-04 22:54:35,906 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"MoveI","register":1}}
+2022-08-04 22:54:35,906 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"TurnRight","register":2}}
+2022-08-04 22:54:35,907 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"Again","register":3}}
+2022-08-04 22:54:35,907 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@790471ea
+2022-08-04 22:54:35,907 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"TurnRight","register":4}}
+2022-08-04 22:54:35,908 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"MoveIII","register":5}}
+2022-08-04 22:54:35,910 [Thread-2] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:35,911 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@1feec64a
+2022-08-04 22:54:35,912 [Thread-2] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:35,913 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@3dc18e96
+2022-08-04 22:54:35,914 [Thread-2] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:35,915 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@49a85e12
+2022-08-04 22:54:35,916 [Thread-2] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:35,917 [Thread-2] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@117a035b
+2022-08-04 22:54:35,921 [Thread-2] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:37,930 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"TurnLeft","register":1}}
+2022-08-04 22:54:37,930 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"PowerUp","register":2}}
+2022-08-04 22:54:37,931 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"MoveIII","register":3}}
+2022-08-04 22:54:37,931 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"MoveI","register":4}}
+2022-08-04 22:54:37,931 [Thread-5] DEBUG network.Client - Client sent: {"messageType":"SelectedCard","messageBody":{"card":"MoveI","register":5}}
+2022-08-04 22:54:38,898 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@116c8e36
+2022-08-04 22:54:38,900 [Thread-4] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:38,901 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@5afa4879
+2022-08-04 22:54:38,903 [Thread-4] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:38,904 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@12c96eca
+2022-08-04 22:54:38,904 [Thread-4] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:38,905 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@51fd7453
+2022-08-04 22:54:38,906 [Thread-4] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = false
+2022-08-04 22:54:38,907 [Thread-4] DEBUG json.wrapper_utilities.MessageHandlerServer - json.json_wrappers.round.programming_phase.SelectedCard@24955d64
+2022-08-04 22:54:38,908 [Thread-4] DEBUG gamelogic.round.ProgrammingPhase - isAllProgrammingComplete(game.getPlayers()) = true
+2022-08-04 22:54:41,911 [Thread-4] DEBUG gamelogic.round.Game - startNewPhase: activePhase: gamelogic.round.ProgrammingPhase@2e7c1a02
+2022-08-04 22:54:41,911 [Thread-4] DEBUG gamelogic.round.Game - startNewPhase: new activePhase: gamelogic.round.ActivationPhase@7542e47f
+2022-08-04 22:54:44,920 [Thread-4] DEBUG gamelogic.round.ActivationPhase - player + card + register = AI 295710 + MoveI + 0
+2022-08-04 22:54:47,923 [Thread-4] DEBUG gamelogic.round.ActivationPhase - player + card + register = AI 642108 + TurnLeft + 0
+2022-08-04 22:54:47,937 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameModel - robotNumber + direction: 2 + TOP
+2022-08-04 22:54:47,938 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameModel - robotNumber + direction: 2 + TOP
+2022-08-04 22:55:04,939 [Thread-4] DEBUG gamelogic.round.ActivationPhase - player + card + register = AI 295710 + TurnRight + 1
+2022-08-04 22:55:04,949 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameModel - robotNumber + direction: 1 + BOTTOM
+2022-08-04 22:55:04,949 [JavaFX Application Thread] DEBUG gui.mvvm.game.GameModel - robotNumber + direction: 1 + BOTTOM
+2022-08-04 22:55:07,943 [Thread-4] DEBUG gamelogic.round.ActivationPhase - player + card + register = AI 642108 + PowerUp + 1
+2022-08-04 22:55:20,960 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,969 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,975 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,978 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,982 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,985 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,988 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,991 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,994 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,997 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:20,999 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,003 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,006 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,009 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,011 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,014 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,016 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,020 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,023 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,026 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,029 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,032 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,037 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,040 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,044 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,048 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,052 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,056 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,060 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,064 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,070 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,075 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,080 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,086 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,092 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,099 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,108 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,116 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,122 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,130 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,138 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,146 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,154 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,167 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,176 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,185 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,193 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,201 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,211 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,220 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,230 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,239 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,250 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,260 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,271 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,283 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,295 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,306 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,317 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,330 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,342 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,355 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,366 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,379 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,393 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,406 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,418 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,430 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,443 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,456 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,469 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,482 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,495 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,509 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,523 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,537 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,551 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,566 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,582 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,595 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,608 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,622 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,636 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,650 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,665 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,680 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,694 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,710 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,726 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,744 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,760 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,782 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,800 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,819 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,836 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,855 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,874 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,894 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,913 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,931 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,952 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,973 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:21,993 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,013 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,033 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,053 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,073 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,094 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,114 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,136 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,158 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,183 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,206 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,229 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,252 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,275 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,302 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,327 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,353 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,378 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,404 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,431 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,458 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,486 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,515 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,541 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,568 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,598 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,628 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,657 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,685 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,715 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,745 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,778 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,809 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,839 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,868 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,898 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,927 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client
+2022-08-04 22:55:22,959 [Thread-4] DEBUG network.ClientHandler - Error sending message to the client

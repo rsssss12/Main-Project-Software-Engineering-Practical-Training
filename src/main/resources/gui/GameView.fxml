@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.mvvm.game.GameViewModel">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/basic_layout/GameBackground.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="CENTER" layoutX="430.0" layoutY="40.0" prefHeight="40.0" prefWidth="950.0" spacing="35.0" fx:id="xAxis">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="35.0" />
+         </padding>
+      </HBox>
+      <VBox fx:id="yAxis" alignment="CENTER" layoutX="380.0" layoutY="90.0" prefHeight="700.0" prefWidth="40.0">
+         <opaqueInsets>
+            <Insets left="20.0" />
+         </opaqueInsets>
+      </VBox>
+      <Pane fx:id="mapPane" layoutX="430.0" layoutY="90.0" prefHeight="700.0" prefWidth="950.0" style="-fx-border-color: BLACK;" />
+      <TitledPane animated="false" expanded="false" layoutX="180.0" prefWidth="202.0" text="Players" visible="false">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <GridPane gridLinesVisible="true" prefHeight="181.0" prefWidth="200.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="134.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="66.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Playername" textAlignment="CENTER" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" expanded="false" prefHeight="206.0" prefWidth="160.0" text="Menu" visible="false">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="131.0" prefWidth="160.0">
+                     <children>
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <VBox fx:id="countDisplayVBox" layoutY="625.0" prefHeight="247.0" prefWidth="264.0" scaleX="0.75" scaleY="0.75" spacing="20.0">
+         <children>
+            <HBox fx:id="checkpointHBox" prefHeight="100.0" prefWidth="228.0">
+               <children>
+                  <HBox prefHeight="102.0" prefWidth="131.0">
+                     <children>
+                        <ImageView fx:id="checkPointIcon" fitHeight="102.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@Images/board_elements/checkpoint.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="checkPointCount1" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="102.0" prefWidth="100.0" text="=">
+                     <font>
+                        <Font name="Robo-Clone" size="46.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="checkPointCount" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="102.0" prefWidth="100.0" text="0">
+                     <font>
+                        <Font name="Robo-Clone" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="energyReserveHBox" prefHeight="100.0" prefWidth="228.0">
+               <children>
+                  <HBox prefHeight="102.0" prefWidth="131.0">
+                     <children>
+                        <ImageView fx:id="energyReserveIcon" fitHeight="102.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/basic_layout/EnergyCube.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="102.0" prefWidth="100.0" text="=">
+                     <font>
+                        <Font name="Robo-Clone" size="46.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="energyReserveCount" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="102.0" prefWidth="100.0" text="5">
+                     <font>
+                        <Font name="Robo-Clone" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <GridPane gridLinesVisible="true" layoutX="29.0" layoutY="586.0" prefHeight="260.0" prefWidth="296.0" visible="false">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="177.0" minHeight="10.0" prefHeight="175.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="discardPileText" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Discard &#10;Pile" textAlignment="CENTER">
+               <font>
+                  <Font name="Robo-Clone" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="programmingDeckText" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="160.0" text="Deck" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Robo-Clone" size="33.0" />
+               </font>
+            </Label>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="discardPileStackCardBack" fitHeight="175.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+            <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="programmingDeckCardBack" fitHeight="175.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+      <HBox fx:id="registerHBox" layoutX="12.0" layoutY="857.0" prefHeight="206.0" prefWidth="815.0">
+         <children>
+            <StackPane fx:id="register1Stack" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="186.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cards/card_back.png" />
+                     </image>
+                   </ImageView>
+                  <Label id="registerText" fx:id="register1Text1" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="#ff2b00" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="Register 1" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.9004739336492891" startX="0.04265402843601896">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <Label id="registerText" fx:id="register1Text" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" text="Register 1" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.37440758293838855" startX="0.037914691943127965" startY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <ImageView fx:id="register1" fitHeight="169.0" fitWidth="122.0" onDragDropped="#dropInRegister" onDragEntered="#movedOverTheRightContainer" onDragExited="#movedAwayFromTheRightContainer" onDragOver="#acceptCardToRegister" onMouseClicked="#removeFromRegister" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </StackPane>
+            <StackPane fx:id="register1Stack1" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="186.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cards/card_back.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="registerText" fx:id="register1Text11" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="#ff2b00" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="Register 2" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.9004739336492891" startX="0.04265402843601896">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <Label id="registerText" fx:id="register1Text2" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" text="Register 2" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.37440758293838855" startX="0.037914691943127965" startY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <ImageView fx:id="register2" fitHeight="169.0" fitWidth="122.0" onDragDropped="#dropInRegister" onDragEntered="#movedOverTheRightContainer" onDragExited="#movedAwayFromTheRightContainer" onDragOver="#acceptCardToRegister" onMouseClicked="#removeFromRegister" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="register1Stack2" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="186.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cards/card_back.png" />
+                     </image></ImageView>
+                  <Label id="registerText" fx:id="register1Text12" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="#ff2b00" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="Register 3" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.9004739336492891" startX="0.04265402843601896">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <Label id="registerText" fx:id="register1Text3" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" text="Register 3" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.37440758293838855" startX="0.037914691943127965" startY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <ImageView fx:id="register3" fitHeight="169.0" fitWidth="122.0" onDragDropped="#dropInRegister" onDragEntered="#movedOverTheRightContainer" onDragExited="#movedAwayFromTheRightContainer" onDragOver="#acceptCardToRegister" onMouseClicked="#removeFromRegister" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="register1Stack3" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="186.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cards/card_back.png" />
+                     </image></ImageView>
+                  <Label id="registerText" fx:id="register1Text13" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="#ff2b00" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="Register 4" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.9004739336492891" startX="0.04265402843601896">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <Label id="registerText" fx:id="register1Text4" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" text="Register 4" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.37440758293838855" startX="0.037914691943127965" startY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <ImageView fx:id="register4" fitHeight="169.0" fitWidth="122.0" onDragDropped="#dropInRegister" onDragEntered="#movedOverTheRightContainer" onDragExited="#movedAwayFromTheRightContainer" onDragOver="#acceptCardToRegister" onMouseClicked="#removeFromRegister" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="register1Stack4" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="186.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/cards/card_back.png" />
+                     </image></ImageView>
+                  <Label id="registerText" fx:id="register1Text14" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="#ff2b00" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="4.0" text="Register 5" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.9004739336492891" startX="0.04265402843601896">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <Label id="registerText" fx:id="register1Text5" alignment="BOTTOM_CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" textFill="#a18c8c">
+                     <font>
+                        <Font name="Robo-Clone" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="35.0" right="5.0" />
+                     </padding>
+                     <graphic>
+                        <Text stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" text="Register 5" textAlignment="CENTER" wrappingWidth="117.13671875">
+                           <font>
+                              <Font name="Robo-Clone" size="19.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="0.042654028436018954" endY="0.37440758293838855" startX="0.037914691943127965" startY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                     </graphic>
+                  </Label>
+                  <ImageView fx:id="register5" fitHeight="169.0" fitWidth="122.0" onDragDropped="#dropInRegister" onDragEntered="#movedOverTheRightContainer" onDragExited="#movedAwayFromTheRightContainer" onDragOver="#acceptCardToRegister" onMouseClicked="#removeFromRegister" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="cardsInHandHBox" layoutX="860.0" layoutY="918.0" prefHeight="165.0" prefWidth="700.0" translateY="-10.0">
+         <children>
+            <Pane fx:id="cardInHand1Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand1Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children></Pane>
+            <Pane fx:id="cardInHand2Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand2Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children></Pane>
+            <Pane fx:id="cardInHand3Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand3Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="cardInHand4Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand4Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="cardInHand5Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand5Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="cardInHand6Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand6Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="cardInHand7Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand7Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="cardInHand8Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand8Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane fx:id="cardInHand9Pane" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="cardsInHand9Image" fitHeight="160.0" fitWidth="120.0" onDragDetected="#dragToRegister" onDragDone="#evaluateRegistration" onMouseEntered="#hoverOverCardsInHand" onMouseExited="#exitCardsOnHand" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <VBox fx:id="upgradeCardsVBox" layoutX="1470.0" layoutY="691.0" prefHeight="358.0" prefWidth="421.0" visible="false">
+         <children>
+            <HBox fx:id="temporaryUpgradeCardsHBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="182.0" prefWidth="421.0">
+               <children>
+                  <StackPane maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="179.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: BLACK;" text="Temporary&#10;Upgrade&#10;Card&#10;1" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Robo-Clone" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="179.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: BLACK;" text="Temporary&#10;Upgrade&#10;Card&#10;2" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Robo-Clone" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="179.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: BLACK;" text="Temporary&#10;Upgrade&#10;Card&#10;3" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Robo-Clone" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <HBox fx:id="temporaryUpgradeCardsHBox1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="182.0" prefWidth="421.0">
+               <children>
+                  <StackPane maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="179.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: BLACK;" text="Permanent&#10;Upgrade&#10;Card&#10;1" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Robo-Clone" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="179.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: BLACK;" text="Permanent&#10;Upgrade&#10;Card&#10;2" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Robo-Clone" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="179.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" graphicTextGap="0.0" lineSpacing="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: BLACK;" text="Permanent&#10;Upgrade&#10;Card&#10;3" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Robo-Clone" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <GridPane fx:id="infoButtonsGridPane" layoutX="1550.0" layoutY="456.0" prefHeight="227.0" prefWidth="308.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" percentWidth="49.0" prefWidth="130.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" percentWidth="50.0" prefWidth="160.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="112.0" minHeight="10.0" percentHeight="50.0" prefHeight="112.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="120.0" minHeight="10.0" percentHeight="50.0" prefHeight="113.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <StackPane layoutX="1425.0" layoutY="233.0" prefHeight="219.0" prefWidth="461.0">
+         <children>
+            <ImageView fx:id="speechBubble" fitHeight="214.0" fitWidth="457.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/basic_layout/speechBubble.png" />
+               </image></ImageView>
+            <Label fx:id="speechBubbleText" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Are You Ready To &#10;RUMBLE!?" textAlignment="CENTER" wrapText="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <StackPane.margin>
+                  <Insets bottom="20.0" left="60.0" right="60.0" top="60.0" />
+               </StackPane.margin>
+               <font>
+                  <Font name="Berlin Sans FB" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <ImageView fx:id="narwhalImage" fitHeight="219.0" fitWidth="323.0" layoutX="1563.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/basic_layout/NarwalMic.png" />
+         </image></ImageView>
+      <Pane layoutX="29.0" layoutY="90.0" prefHeight="540.0" prefWidth="325.0">
+         <children>
+            <VBox prefHeight="540.0" prefWidth="325.0" spacing="15.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="92.0" prefWidth="150.0" text="Username: ">
+                     <font>
+                        <Font name="Robo-Clone" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="playerNameLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="75.0" prefWidth="321.0" text="Playername" wrapText="true">
+                     <font>
+                        <Font name="Robo-Clone" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="92.0" prefWidth="150.0" text="Client ID:">
+                     <font>
+                        <Font name="Robo-Clone" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="playerClientIDLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="50.0" prefWidth="321.0" text="Number" wrapText="true">
+                     <font>
+                        <Font name="Robo-Clone" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="92.0" prefWidth="150.0" text="Robot: ">
+                     <font>
+                        <Font name="Robo-Clone" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="robotNameLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1250.0" prefWidth="208.0" text="Robot Name" wrapText="true">
+                     <font>
+                        <Font name="Robo-Clone" size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane minHeight="200.0" prefHeight="200.0">
+                     <children>
+                        <ImageView fx:id="ownRobotImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <TilePane alignment="CENTER" layoutX="998.0" layoutY="816.0" prefHeight="113.0" prefWidth="270.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="264.0" spacing="20.0">
+               <children>
+                  <Label fx:id="timerText" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="140.0" text="Timer: ">
+                     <font>
+                        <Font name="Robo-Clone" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timer" alignment="CENTER" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="30" textAlignment="CENTER">
+                     <font>
+                        <Font name="Robo-Clone" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </TilePane>
+      <TitledPane animated="false" layoutX="1550.0" layoutY="600.0" prefHeight="450.0" prefWidth="337.0" text="Infos">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: WHITE; -fx-border-color: GREY;">
+               <children>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="410.4" prefViewportHeight="450.0" prefWidth="338.0" style="-fx-border-color: GREY;">
+                    <content>
+                      <AnchorPane style="-fx-background-color: WHITE;">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="274.4" prefWidth="336.0">
+                                 <children>
+                                    <HBox prefHeight="66.0" prefWidth="336.0" style="-fx-border-color: GREY;" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="50.0" prefWidth="100.0" text="Active Phase:" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Robo-Clone" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="activePhaseLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="50.0" text="Active Phase" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Robo-Clone" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="66.0" prefWidth="336.0" style="-fx-border-color: GREY;">
+                                       <children>
+                                          <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="50.0" prefWidth="100.0" text="Map:" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Robo-Clone" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="chosenMapLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="50.0" text="Chosen Map" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Robo-Clone" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="infoPlayer1HBox" disable="true" style="-fx-border-color: GREY;">
+                                       <children>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Player 1:" VBox.vgrow="ALWAYS">
+                                                   <font>
+                                                      <Font name="Robo-Clone" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="20.0" />
+                                                   </padding>
+                                                </Label>
+                                                <VBox spacing="15.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox>
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Username:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="usernamePlayer1" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="usernamePlayer1Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox>
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Client ID:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="clientIDPlayer1" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="clientIDPlayer1Text" strokeType="OUTSIDE" strokeWidth="0.0" text="Navy Seal" wrappingWidth="100.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox>
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Robot:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label fx:id="robotPlayer1" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Navy Seal" wrapText="true">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                                                     <image>
+                                                                        <Image url="@Images/robots/Navy_Seal.png" />
+                                                                     </image>
+                                                                     <rotationAxis>
+                                                                        <Point3D y="1.0" />
+                                                                     </rotationAxis>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="50.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="infoPlayer2HBox" disable="true" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: GREY;">
+                                       <children>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Player 2:">
+                                                   <font>
+                                                      <Font name="Robo-Clone" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="20.0" />
+                                                   </padding>
+                                                </Label>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Username:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="usernamePlayer2" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="usernamePlayer2Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Client ID:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="clientIDPlayer2" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="clientIDPlayer2Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="100.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="214.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Robot:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label fx:id="robotPlayer2" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Red October" wrappingWidth="95.0">
+                                                                           <font>
+                                                                              <Font name="Robo-Clone" size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </graphic>
+                                                                  </Label>
+                                                                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                                                     <image>
+                                                                        <Image url="@Images/robots/Red_October.png" />
+                                                                     </image>
+                                                                     <rotationAxis>
+                                                                        <Point3D y="1.0" />
+                                                                     </rotationAxis>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="50.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="infoPlayer3HBox" disable="true" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: GREY;">
+                                       <children>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Player 3:">
+                                                   <font>
+                                                      <Font name="Robo-Clone" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="20.0" />
+                                                   </padding>
+                                                </Label>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Username:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="usernamePlayer3" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="usernamePlayer3Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Client ID:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="clientIDPlayer3" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="clientIDPlayer3Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="100.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="214.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Robot:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label fx:id="robotPlayer3" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Whalter White" wrappingWidth="95.0">
+                                                                           <font>
+                                                                              <Font name="Robo-Clone" size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </graphic>
+                                                                  </Label>
+                                                                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                                                     <image>
+                                                                        <Image url="@Images/robots/Whalter_White.png" />
+                                                                     </image>
+                                                                     <rotationAxis>
+                                                                        <Point3D y="1.0" />
+                                                                     </rotationAxis>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="50.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="infoPlayer4HBox" disable="true" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: GREY;">
+                                       <children>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Player 4:">
+                                                   <font>
+                                                      <Font name="Robo-Clone" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="20.0" />
+                                                   </padding>
+                                                </Label>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Username:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="usernamePlayer4" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="usernamePlayer4Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Client ID:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="clientIDPlayer4" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="clientIDPlayer4Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="100.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="214.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Robot:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label fx:id="robotPlayer4" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Whalker, Texas Ranger" wrappingWidth="95.0">
+                                                                           <font>
+                                                                              <Font name="Robo-Clone" size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </graphic>
+                                                                  </Label>
+                                                                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                                                     <image>
+                                                                        <Image url="@Images/robots/Whalker_Texas_Ranger.png" />
+                                                                     </image>
+                                                                     <rotationAxis>
+                                                                        <Point3D y="1.0" />
+                                                                     </rotationAxis>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="50.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="infoPlayer5HBox" disable="true" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: GREY;">
+                                       <children>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Player 5:">
+                                                   <font>
+                                                      <Font name="Robo-Clone" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="20.0" />
+                                                   </padding>
+                                                </Label>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Username:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="usernamePlayer5" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="usernamePlayer5Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Client ID:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="clientIDPlayer5" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="clientIDPlayer5Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="100.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="214.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Robot:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label fx:id="robotPlayer5" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Narwhal Longbottom" wrappingWidth="120.0">
+                                                                           <font>
+                                                                              <Font name="Robo-Clone" size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </graphic>
+                                                                  </Label>
+                                                                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                                                     <image>
+                                                                        <Image url="@Images/robots/Narwhal_Longbottom.png" />
+                                                                     </image>
+                                                                     <rotationAxis>
+                                                                        <Point3D y="1.0" />
+                                                                     </rotationAxis>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="50.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox fx:id="infoPlayer6HBox" disable="true" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: GREY;">
+                                       <children>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Player 6:">
+                                                   <font>
+                                                      <Font name="Robo-Clone" size="18.0" />
+                                                   </font>
+                                                   <padding>
+                                                      <Insets bottom="20.0" />
+                                                   </padding>
+                                                </Label>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Username:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="usernamePlayer6" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="usernamePlayer6Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Client ID:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="clientIDPlayer6" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <Text fx:id="clientIDPlayer6Text" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="100.0">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </graphic>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="214.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="80.0" text="Robot:" HBox.hgrow="ALWAYS">
+                                                               <font>
+                                                                  <Font name="Robo-Clone" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label fx:id="robotPlayer6" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" wrapText="true">
+                                                                     <font>
+                                                                        <Font name="Robo-Clone" size="18.0" />
+                                                                     </font>
+                                                                     <graphic>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Incredible Whalk" wrappingWidth="95.0">
+                                                                           <font>
+                                                                              <Font name="Robo-Clone" size="18.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </graphic>
+                                                                  </Label>
+                                                                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                                                     <image>
+                                                                        <Image url="@Images/robots/Incredible_Whalk.png" />
+                                                                     </image>
+                                                                     <rotationAxis>
+                                                                        <Point3D y="1.0" />
+                                                                     </rotationAxis>
+                                                                  </ImageView>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="50.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="5.0" right="25.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="Robo-Clone" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TitledPane>
+      <HBox layoutX="1550.0" layoutY="460.0" prefHeight="140.0" prefWidth="337.0">
+         <children>
+            <Button fx:id="upgradeButton" alignment="CENTER" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Upgrade" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Robo-Clone" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="chatButton" alignment="CENTER" disable="true" maxHeight="1.7976931348623157E308" maxWidth="169.0" minWidth="169.0" mnemonicParsing="false" onAction="#openChat" prefWidth="0.0" text="Chat" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Robo-Clone" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ToggleButton fx:id="soundButton" layoutX="1811.0" layoutY="53.0" mnemonicParsing="false" onAction="#mute" text="Sound">
+         <font>
+            <Font name="Robo-Clone" size="18.0" />
+         </font>
+      </ToggleButton>
+   </children>
+</Pane>

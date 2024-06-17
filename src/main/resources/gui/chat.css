@@ -1,0 +1,67 @@
+@font-face {
+    src: url("fonts/roboclone.ttf");
+}
+
+
+#chatTitle {
+    -fx-font-family: Robo-Clone;
+    -fx-alignment: CENTER;
+    -fx-font-size: 50;
+    -fx-text-alignment: CENTER;
+    -fx-text-fill: BLACK;
+
+}
+
+
+#userID {
+    -fx-font-family: Robo-Clone;
+
+}
+
+
+#buttonSend {
+    -fx-font-family: Robo-Clone;
+}
+
+
+.public {
+    -fx-background-radius: 20px;
+    -fx-background-color: rgb(104, 227, 95);
+    -fx-font-size: 14;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+.private {
+    -fx-background-color: rgb(235, 152, 217);
+    -fx-background-radius: 20px;
+    -fx-font-size: 14;
+    -fx-font-family: "Berlin Sans FB";
+}
+
+
+
+
+
+
+
+
+.nameEqualsSender {
+    -fx-background-color: rgb(233,233,235);
+    -fx-background-radius: 20px;
+}
+
+.senderEqualsServer {
+    -fx-background-color: rgb(230,220,100);
+    -fx-background-radius: 20px;
+}
+
+.senderEqualsGame {
+    -fx-background-color: rgb(230,120,230);
+    -fx-background-radius: 20px;
+}
+
+.else {
+    -fx-color: rgb(10,10,10);
+    -fx-background-color: rgb(30,170,240);
+    -fx-background-radius: 20px;
+}
